@@ -1,4 +1,4 @@
-package boj.브루드포스;
+package boj.브루드포스.p3085;
 
 /*
 문제
@@ -46,11 +46,10 @@ CPPZZ
 */
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-public class p3085 {
+public class skflqkfl {
 
     final static int MAX_N = 50;
 

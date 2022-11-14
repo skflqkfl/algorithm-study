@@ -5,21 +5,21 @@ import java.util.*;
 public class skflqkfl {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int N = scanner.nextInt();
-        List<Integer> inputList = new ArrayList<>();
-
-        for(int i=1; i<=N; i++) {
-            inputList.add(i);
-        }
-
-        int n = N;
-        int r = N;
-        int depth = 0;
-
-        List<Boolean> selectList = new ArrayList<>();
-        
-        permutation(n, r, depth, inputList, selectList);
+//        Scanner scanner = new Scanner(System.in);
+//        int N = scanner.nextInt();
+//        List<Integer> inputList = new ArrayList<>();
+//
+//        for(int i=1; i<=N; i++) {
+//            inputList.add(i);
+//        }
+//
+//        int n = N;
+//        int r = N;
+//        int depth = 0;
+//
+//        List<Boolean> selectList = new ArrayList<>();
+//
+//        permutation(n, r, depth, inputList, selectList);
 
     }
 

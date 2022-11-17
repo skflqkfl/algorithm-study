@@ -5,43 +5,35 @@ import java.util.*;
 public class skflqkfl {
 
     public static void main(String[] args) {
-//        Scanner scanner = new Scanner(System.in);
-//        int N = scanner.nextInt();
-//        List<Integer> inputList = new ArrayList<>();
-//
-//        for(int i=1; i<=N; i++) {
-//            inputList.add(i);
-//        }
-//
-//        int n = N;
-//        int r = N;
-//        int depth = 0;
-//
-//        List<Boolean> selectList = new ArrayList<>();
-//
-//        permutation(n, r, depth, inputList, selectList);
+        Scanner scanner = new Scanner(System.in);
+        int N = scanner.nextInt();
+        int[] target = new int[N];
+        int[] output = new int[N];
+        boolean[] visited = new boolean[N];
+        for (int i = 0; i < N; i++) {
+            target[i] = i+1;
+        }
+
+        permutation(target, output, visited, 0, N, N);
 
     }
 
-    private static void permutation(int n, int r, int depth, List<Integer> inputList, List<Boolean> selectList) {
-        if(depth == n) {
-            inputList.forEach(i -> System.out.print(i + " "));
+    static void permutation(int[] target, int[] output, boolean[] visited, int depth, int n, int r) {
+        if(depth == r) {
+            for (int i : output) {
+                System.out.print(i + " ");
+            }
             System.out.println();
             return;
         }
 
-        for(int i=0; i<n; i++) {
-            if(selectList.size()-1 <i)
-                selectList.add(false);
-            if(selectList.get(i) == true)
-                continue;
-
-            selectList.set(i, true);
-            permutation(n, r, depth + 1, inputList, selectList);
-            selectList.set(i, false);
+        for (int i = 0; i < n; i++) {
+            if(visited[i] == false) {
+                visited[i] = true;
+                output[depth] = target[i];
+                permutation(target, output, visited, depth + 1, n, r);
+                visited[i] = false;
+            }
         }
-
-        return;
     }
-
 }
